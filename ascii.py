@@ -22,11 +22,11 @@ def pixels_to_ascii(image):
     return(characters)
 
 def main(new_width=100):
-    path = input("Masukin Poto Yang Bener Amjg :\n")
+    path = input("Masukin Foto Yang Ingin Di Rubah :\n")
     try:
         image = PIL.Image.open(path)
     except:
-        print(path,"Masukkin Yang Bener Komtol")
+        print(path,"Masukkin Foto Yang Benar ")
     new_image_data = pixels_to_ascii(grayify(resize_image(image)))
 
     pixel_count = len(new_image_data)
